@@ -8,7 +8,8 @@ import openai
 from tqdm import tqdm
 from prompt import JUDGE_COT_PROMPT, JUDGE_PROMPT, MEMORY_COT_PROMPT, MEMORY_PROMPT, CONTEXT_COT_PROMPT, CONTEXT_PROMPT, CONTEXT_ENHANCE_EVAL_SYS, JUDGE_EVAL_SYS, MEMORY_EVAL_SYS, USR
 
-from utils import OPENAI_API_KEY,OPENAI_BASE_URL,Global_Bio
+from utils import Global_Bio
+from utils_key import OPENAI_API_KEY,OPENAI_BASE_URL
 
 from openai import OpenAI
 from pydantic import BaseModel
@@ -46,8 +47,8 @@ class DPOData:
         self.model_name = "deepseek-chat"  # Set your model name here
         if OPENAI_BASE_URL:
             self.client = openai.OpenAI(
-                api_key=OPENAI_API_KEY,
-                base_url=OPENAI_BASE_URL,
+                api_key = OPENAI_API_KEY,
+                base_url = OPENAI_BASE_URL,
             )
         else:
             self.client = OpenAI(
