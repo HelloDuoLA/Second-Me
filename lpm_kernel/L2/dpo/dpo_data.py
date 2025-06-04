@@ -17,7 +17,7 @@ from collections import defaultdict
 # COT mode
 IS_COT = False
 # USER NAME SETTING
-USER_NAME = "Felix Tao"
+USER_NAME = "Zhicong Xie"
 # prefered language
 preference_language = "English"
 
@@ -43,7 +43,7 @@ class DPOData:
         self.output_dir = output_dir
         
         # Use the API key and base URL from utils.py
-        self.model_name = "gpt-4o"  # Set your model name here
+        self.model_name = "deepseek-chat"  # Set your model name here
         if OPENAI_BASE_URL:
             self.client = openai.OpenAI(
                 api_key=OPENAI_API_KEY,

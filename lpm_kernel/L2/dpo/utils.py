@@ -1,7 +1,7 @@
 # utils.py
-OPENAI_API_KEY = "Please provide your OpenAI API key."
-OPENAI_BASE_URL = "Please provide your OpenAI base URL."
+OPENAI_API_KEY = "sk-58e479818b96429bb23d35b6dfa195cd"
+OPENAI_BASE_URL = "https://api.deepseek.com"
 
 Global_Bio = """
-I'm CEO of a successful company. I'm also a good engineer.
+I am a second-year Master's candidate in Computer Applications at Jinan University specializing in AI and distributed systems, combining rigorous academic training with hands-on engineering experience. Proven technical expertise in Python/C++ development, Linux kernel optimization, and AI system deployment using TensorFlow/PyTorch frameworks. Demonstrated impact through multiple award-winning projects including an AI edge computing system (40% latency reduction) and smart campus IoT platform (18% energy savings), resulting in 1 patent application, 2 CCF-B conference publications, and national scholarship recognition. Skilled in cross-disciplinary collaboration within agile teams (10+ members across 3 institutions) and passionate about open-source innovation (maintainer of 2 GitHub repositories). Bilingual in English-Mandarin with strong technical communication abilities.
 """
