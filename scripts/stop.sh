@@ -12,7 +12,7 @@ load_env() {
         export LOCAL_FRONTEND_PORT=$(grep '^LOCAL_FRONTEND_PORT=' .env | cut -d '=' -f2)
     else
         # Use default port if .env not found
-        export LOCAL_APP_PORT=8002
+        export LOCAL_APP_PORT=8003
         log_info "Using default port: ${LOCAL_APP_PORT}"
     fi
 }
@@ -55,7 +55,7 @@ stop_services() {
         fi
     fi
     
-    # Double-check if port 8002 is still in use
+    # Double-check if port 8003 is still in use
     PORT_PID=$(lsof -ti:${LOCAL_APP_PORT} 2>/dev/null)
     if [ ! -z "$PORT_PID" ]; then
         log_warning "Port ${LOCAL_APP_PORT} is still in use, forcefully terminating process..."

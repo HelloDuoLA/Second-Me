@@ -12,7 +12,7 @@ load_env() {
         export LOCAL_FRONTEND_PORT=$(grep '^LOCAL_FRONTEND_PORT=' .env | cut -d '=' -f2)
     else
         # Use default ports if .env not found
-        export LOCAL_APP_PORT=8002
+        export LOCAL_APP_PORT=8003
         export LOCAL_FRONTEND_PORT=3000
         log_warning "Using default ports: Backend=${LOCAL_APP_PORT}, Frontend=${LOCAL_FRONTEND_PORT}"
     fi

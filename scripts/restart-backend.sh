@@ -11,7 +11,7 @@ load_env() {
         export LOCAL_APP_PORT=$(grep '^LOCAL_APP_PORT=' .env | cut -d '=' -f2)
     else
         # Use default port if .env not found
-        export LOCAL_APP_PORT=8002
+        export LOCAL_APP_PORT=8003
         log_info "Using default port: ${LOCAL_APP_PORT}"
     fi
 }
@@ -52,7 +52,7 @@ restart_backend() {
     fi
     
     # 1. Stop backend service
-    BACKEND_PID=$(lsof -ti:8002)
+    BACKEND_PID=$(lsof -ti:8003)
     if [ ! -z "$BACKEND_PID" ]; then
         kill $BACKEND_PID
         log_success "Backend service stopped"

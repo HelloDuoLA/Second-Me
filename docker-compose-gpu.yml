@@ -6,7 +6,7 @@ services:
     container_name: second-me-backend
     restart: unless-stopped
     ports:
-      - "8002:8002"
+      - "8003:8003"
       - "8080:8080"
     volumes:
       - ./data:/app/data
@@ -18,7 +18,7 @@ services:
       - llama-cpp-build:/app/llama.cpp/build  # Persist the llama.cpp build
     environment:
       # Environment variables
-      - LOCAL_APP_PORT=8002
+      - LOCAL_APP_PORT=8003
       - IN_DOCKER_ENV=1
       - PLATFORM=${PLATFORM:-linux}
       - USE_CUDA=1
@@ -51,7 +51,7 @@ services:
       - ./logs:/app/logs
       - ./resources:/app/resources
     environment:
-      - VITE_API_BASE_URL=http://backend:8002
+      - VITE_API_BASE_URL=http://backend:8003
     depends_on:
       - backend
     deploy:

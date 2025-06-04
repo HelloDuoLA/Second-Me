@@ -150,7 +150,7 @@ start_services() {
         export LOCAL_FRONTEND_PORT="$(grep '^LOCAL_FRONTEND_PORT=' .env | cut -d '=' -f2)"
         
         if [[ -z "$LOCAL_APP_PORT" ]]; then
-            export LOCAL_APP_PORT="8002"
+            export LOCAL_APP_PORT="8003"
         fi
         if [[ -z "$LOCAL_FRONTEND_PORT" ]]; then
             export LOCAL_FRONTEND_PORT="3000"
